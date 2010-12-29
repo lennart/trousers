@@ -15,9 +15,9 @@ Jeweler::Tasks.new do |gem|
   gem.name = "trousers"
   gem.homepage = "http://github.com/lennart/trousers"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "l.melzer@tu-bs.de"
+  gem.summary = %Q{Keeps everything you lose in your trousers organized by pockets}
+  gem.description = %Q{I often lose stuff in my pockets but in contrast to the real world I can organize all of it in a CouchDB. __Trousers__ is just a simple __CouchDB__ interface with a __Thor__ Command-Line Tool to store/modify and list Things that otherwise get lost in the void}
+  gem.email = "l@melzer.ti"
   gem.authors = ["lennart"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
