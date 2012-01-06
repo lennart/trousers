@@ -8,8 +8,10 @@ Gem::Specification.new do |s|
   s.authors     = ["Lennart Melzer"]
   s.email       = ["me@lmaa.name"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{organize stuff that otherwise gets lost in the void}
+  s.description = %q{Something that could _also_ be called a **Stickies App**,
+    uses CouchDB for storage and thor as a CLI frontend
+  }
 
   s.rubyforge_project = "trousers"
 
