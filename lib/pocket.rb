@@ -1,6 +1,6 @@
 require 'couchrest'
 
-DATABASE = CouchRest.new("localhost:5984").database!("pockets")
+DATABASE = CouchRest.new("localhost:5984").database!("trousers")
 
 class Pocket
   attr_reader :doc
