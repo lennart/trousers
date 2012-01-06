@@ -1,6 +1,6 @@
 require 'couchrest'
 
-DATABASE = CouchRest.new("localhost:5984").database!("trousers")
+DATABASE = CouchRest.database!("localhost:5984/trousers")
 
 class Pocket
   attr_reader :doc
@@ -60,6 +60,14 @@ class Pocket
     def all
       DATABASE.documents(:include_docs => true)["rows"].map do |row|
         prepare row["doc"]
+      end
+    end
+
+    def setup?
+      begin
+        DATABASE.info
+      rescue RestClient::ResourceNotFound => e
+        raise Missing.new, "The database `trousers` is missing, please create as your CouchDB is not admin partying!"
       end
     end
 
