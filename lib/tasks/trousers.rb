@@ -2,6 +2,7 @@ require File.dirname(__FILE__) + '/../trousers'
 
 module Trousers
   class Pants < Thor
+    map "-l" => :list, "-c" => :add, "-x" => :del
     namespace :trousers
     desc "add NAME", "Add a new Pocket to your trousers"
     def add name
@@ -35,6 +36,7 @@ module Trousers
   end
 
   class Pockets < Thor
+    map "-c" => :add
     desc "add POCKET NAME", "Add something to an existing Pocket"
     def add pocket, name 
       setup!
