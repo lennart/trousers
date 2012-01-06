@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'thor'
+
+require File.dirname(__FILE__) + '/../lib/tasks/trousers'
+
+scope = %w{pants pockets}.include?(s = File.basename($0)) ? s.capitalize : "Pants"
+
+
+
+Trousers.const_get(scope).start

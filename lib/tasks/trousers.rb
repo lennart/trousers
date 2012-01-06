@@ -1,4 +1,4 @@
-require 'trousers'
+require File.dirname(__FILE__) + '/../trousers'
 
 module Trousers
   class Pants < Thor
