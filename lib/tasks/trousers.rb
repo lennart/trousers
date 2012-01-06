@@ -6,7 +6,7 @@ module Trousers
     desc "add NAME", "Add a new Pocket to your trousers"
     def add name
       setup!
-      pocket = fetch name
+      pocket = Trousers.fetch name
       pocket.persist
     end
 
@@ -44,7 +44,7 @@ module Trousers
       end
       pocket.persist
     end
-    
+
     private
 
     def setup!
