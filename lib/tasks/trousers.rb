@@ -36,7 +36,7 @@ module Trousers
   end
 
   class Pockets < Thor
-    map "-c" => :add
+    map "-c" => :add, "-l" => :list
     desc "add POCKET NAME", "Add something to an existing Pocket"
     def add pocket, name 
       setup!
@@ -45,6 +45,17 @@ module Trousers
         ask "What is this #{name}"
       end
       pocket.persist
+    end
+
+    desc "list POCKET", "List contents of POCKET"
+    def list pocket
+      setup!
+
+      p = Trousers.fetch(pocket)
+
+      say p.name
+      mapped = p.things.map {|name, t| [t["at"], name, t["content"]] }
+      print_table mapped
     end
 
     private
